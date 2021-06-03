@@ -21,10 +21,13 @@ public class ServletOne extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		/*
+		Integer qq = Integer.valueOf(q1)+Integer.valueOf(q2);
+		String q3 = "La suma de "+q1+" y "+q2+" es igual a "+qq;
+		response.getWriter().append(q3);
+		 */		
 		String q1 = request.getParameter("q1");
 		String q2 = request.getParameter("q2");
-
 		ejb.setI(Integer.valueOf(q1));
 		ejb.setJ(Integer.valueOf(q2));
 		ejb.add();
@@ -34,16 +37,3 @@ public class ServletOne extends HttpServlet {
 	}
 
 }
-/*
-		String q1 = request.getParameter("q1");
-		String q2 = request.getParameter("q2");
-		System.out.println("q1 : "+q1);
-		System.out.println("q2 : "+q2);
-		Integer qq = Integer.valueOf(q1)+Integer.valueOf(q2);
-		String q3 = "La suma de "+q1+" y "+q2+" es igual a "+qq;
-		response.getWriter().append(q3);
-
-
- * 
- * 
- */
